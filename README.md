@@ -1,4 +1,4 @@
-![Not my picture and not sure who owns it, just found it in a google search and using it]([./assets/infographic-erp-modules.avif))
+![Not my picture and not sure who owns it, just found it in a google search and using it](assets/infographic-erp-modules.avif)
 Not my image, I'm just bogarting it....(idgaf shoulder shrug)
 
 # ERP System
