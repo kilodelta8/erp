@@ -1,4 +1,4 @@
-`![Not my picture and not sure who owns it, just found it in a google search and using it](https://www.netsuite.com/portal/assets/img/business-articles/erp/infographic-erp-modules.jpg)`
+![Not my picture and not sure who owns it, just found it in a google search and using it](https://www.netsuite.com/portal/assets/img/business-articles/erp/infographic-erp-modules.jpg)
 Not my image, I'm just bogarting it....(idgaf shoulder shrug)
 
 # ERP System
