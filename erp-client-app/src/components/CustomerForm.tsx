@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './css/CustomerForm.css'; // Import the CSS file
+import '../css/CustomerForm.css'; // Import the CSS file
 
 interface Customer {
   firstName: string;

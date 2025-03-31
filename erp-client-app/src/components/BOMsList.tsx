@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import '../css/BOMList.css'; // Import the CSS file
+import '../css/BOMsList.css'; // Import the CSS file
 
 interface BOM {
   id: number;

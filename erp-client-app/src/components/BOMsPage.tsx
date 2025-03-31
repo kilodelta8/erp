@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import BOMList from './BOMsList';
 import BOMDetails from './BOMDetails';
 import BOMForm from './BOMForm';
-import '../css/BOMPage.css'; // Import the CSS file
+import '../css/BOMsPage.css'; // Import the CSS file
 
 const BOMsPage: React.FC = () => {
   return (

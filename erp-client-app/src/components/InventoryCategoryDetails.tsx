@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import './InventoryCategoryDetails.css'; // Import the CSS file
+import '../css/InventoryCategoryDetails.css'; // Import the CSS file
 
 interface InventoryCategory {
   id: number;

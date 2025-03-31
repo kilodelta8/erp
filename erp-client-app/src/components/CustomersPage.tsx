@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import CustomersList from './CustomersList';
 import CustomerForm from './CustomerForm';
 import CustomerDetails from './CustomerDetails'; // Assuming you have a CustomerDetails component
-import './css/CustomersPage.css'; // Import the CSS file
+import '../css/CustomersPage.css'; // Import the CSS file
 
 const CustomersPage: React.FC = () => {
   return (
