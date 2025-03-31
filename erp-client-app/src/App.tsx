@@ -1,35 +1,74 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import Layout from './components/Layout';
+import Dashboard from './components/Dashboard';
+import CustomersPage from './components/CustomersPage';
+import InventoryItemsPage from './components/InventoryItemsPage';
+import InventoryCategoriesPage from './components/InventoryCategoriesPage';
+import BOMsPage from './components/BOMsPage';
+import OrdersPage from './components/OrdersPage';
+import LaborEntriesPage from './components/LaborEntriesPage';
+import ReportsPage from './components/ReportsPage';
+import UsersPage from './components/UsersPage';
+import Login from './components/Login';
+import { useState } from 'react';
+import './App.css';
 
-function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+interface User {
+  username: string;
+  role: string;
 }
 
-export default App
+function App() {
+  const [loggedIn, setLoggedIn] = useState(false);
+  const [, setUser] = useState<User | null>(null);
+
+  const handleLogin = (username: string, password: string) => {
+    // Replace with your actual authentication logic
+    if (username === 'test' && password === 'password') {
+      setLoggedIn(true);
+      setUser({ username: username, role: 'admin' }); // Example user data
+    } else {
+      alert('Invalid credentials');
+    }
+  };
+
+  const handleLogout = () => {
+    setLoggedIn(false);
+    setUser(null);
+  };
+
+  const PrivateRoute: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+    return loggedIn ? children : <Navigate to="/login" />;
+  };
+
+  return (
+    <Router>
+      <Routes>
+        <Route path="/login" element={<Login onLogin={handleLogin} />} />
+        <Route
+          path="/*"
+          element={
+            <PrivateRoute>
+              <Layout onLogout={handleLogout}>
+                <Routes>
+                  <Route path="/dashboard" element={<Dashboard />} />
+                  <Route path="/customers/*" element={<CustomersPage />} />
+                  <Route path="/inventory/items/*" element={<InventoryItemsPage />} />
+                  <Route path="/inventory/categories/*" element={<InventoryCategoriesPage />} />
+                  <Route path="/boms/*" element={<BOMsPage />} />
+                  <Route path="/orders/*" element={<OrdersPage />} />
+                  <Route path="/labor-entries/*" element={<LaborEntriesPage />} />
+                  <Route path="/reports/*" element={<ReportsPage />} />
+                  <Route path="/users/*" element={<UsersPage />} />
+                  <Route path="/" element={<Navigate to="/dashboard" />} />
+                </Routes>
+              </Layout>
+            </PrivateRoute>
+          }
+        />
+      </Routes>
+    </Router>
+  );
+}
+
+export default App;

@@ -1,0 +1,28 @@
+.inventory-items-page-container {
+    font-family: sans-serif;
+    padding: 20px;
+  }
+  
+  .inventory-items-nav {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .inventory-items-nav a {
+    text-decoration: none;
+    color: blue;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .inventory-items-nav a:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .inventory-items-content {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 4px;
+  }

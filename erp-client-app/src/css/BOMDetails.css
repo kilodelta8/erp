@@ -1,0 +1,25 @@
+.bom-details-container {
+    padding: 20px;
+    font-family: sans-serif;
+  }
+  
+  .bom-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .bom-table th,
+  .bom-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .bom-table th {
+    background-color: #f2f2f2;
+  }
+  
+  .bom-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }

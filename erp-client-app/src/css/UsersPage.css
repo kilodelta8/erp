@@ -1,0 +1,28 @@
+.users-page-container {
+    font-family: sans-serif;
+    padding: 20px;
+  }
+  
+  .users-nav {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .users-nav a {
+    text-decoration: none;
+    color: blue;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .users-nav a:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .users-content {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 4px;
+  }

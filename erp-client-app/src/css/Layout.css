@@ -1,0 +1,10 @@
+.layout-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the layout takes up at least the full viewport height */
+  }
+  
+  .main-content {
+    flex-grow: 1; /* Allow the main content to expand and fill available space */
+    padding: 20px;
+  }
