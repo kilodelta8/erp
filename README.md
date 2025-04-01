@@ -10,3 +10,7 @@ As of right now I have zero intentions of developing this software any further t
 Yep, I'm using React.  I am new to PostGresql.  It's already jacked my Mac once.
 
 # The plan
+I will have to copy and paste, just imagine for right now.
+
+# Screenshits
+![Login Screen](assets/erp001)
