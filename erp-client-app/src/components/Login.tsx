@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import '../css/Login.css'; // Import the CSS file
+import '../css/Login.css';
 
 interface LoginProps {
-  onLogin: (username: string, password: string) => void; // Function to handle login
+  onLogin: (username: string, password: string) => void;
 }
 
 const Login: React.FC<LoginProps> = ({ onLogin }) => {
@@ -10,7 +10,7 @@ const Login: React.FC<LoginProps> = ({ onLogin }) => {
   const [password, setPassword] = useState('');
   const [error, setError] = useState<string | null>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     if (!username || !password) {
@@ -18,7 +18,12 @@ const Login: React.FC<LoginProps> = ({ onLogin }) => {
       return;
     }
 
-    onLogin(username, password); // Call the onLogin function passed as a prop
+    try {
+      onLogin(username, password);
+    } catch (err) {
+      console.error('Login error:', err);
+      setError('Failed to connect to server');
+    }
   };
 
   return (

@@ -1,4 +1,18 @@
 {
+  "compilerOptions": {
+    "outDir": "./dist", // Output directory for compiled files
+    "rootDir": "./src", // Root directory for source files
+    "declaration": true, // Generate .d.ts files
+    "composite": true, // Required for project references
+    "noEmit": false, // Ensure files are emitted
+    "emitDeclarationOnly": false, // Emit both .js and .d.ts files
+    "module": "commonjs", // Use CommonJS for Node.js compatibility
+    "target": "es6", // Target ECMAScript 6
+    "strict": true, // Enable strict type checking
+    "esModuleInterop": true // Enable ES module interop
+  },
+  "include": ["src/**/*"], // Include all files in the 'src' directory
+  "exclude": ["node_modules", "dist"], // Exclude 'node_modules' and 'dist'
   "files": [],
   "references": [
     { "path": "./tsconfig.app.json" },

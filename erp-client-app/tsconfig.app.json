@@ -12,7 +12,8 @@
     "allowImportingTsExtensions": true,
     "isolatedModules": true,
     "moduleDetection": "force",
-    "noEmit": true,
+    "noEmit": false, // Ensure files are emitted
+    "emitDeclarationOnly": false, // Emit both .js and .d.ts files
     "jsx": "react-jsx",
 
     /* Linting */
@@ -20,7 +21,12 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    "noUncheckedSideEffectImports": true,
+
+    /* Composite projects */
+    "composite": true, // Required for project references
+    "declaration": true // Generate .d.ts files
   },
-  "include": ["src"]
+  "include": ["src/**/*"], // Include all files in the 'src' directory
+  "exclude": ["node_modules", "dist"]
 }

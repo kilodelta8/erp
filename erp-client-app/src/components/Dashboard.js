@@ -1,0 +1,6 @@
+import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
+import '../css/Dashboard.css'; // Import the CSS file
+const Dashboard = () => {
+    return (_jsxs("div", { className: "dashboard-container", children: [_jsx("h1", { children: "Dashboard" }), _jsxs("div", { className: "dashboard-content", children: [_jsxs("div", { className: "dashboard-section", children: [_jsx("h2", { children: "Sales Overview" }), _jsx("p", { children: "Total Sales: $10,000" }), _jsx("p", { children: "Monthly Sales: $2,500" })] }), _jsxs("div", { className: "dashboard-section", children: [_jsx("h2", { children: "Inventory Status" }), _jsx("p", { children: "Items in Stock: 150" }), _jsx("p", { children: "Low Stock Items: 10" })] }), _jsxs("div", { className: "dashboard-section", children: [_jsx("h2", { children: "Recent Orders" }), _jsxs("ul", { children: [_jsx("li", { children: "Order #123: $100 - Shipped" }), _jsx("li", { children: "Order #124: $50 - Processing" })] })] }), _jsxs("div", { className: "dashboard-section", children: [_jsx("h2", { children: "Customer Insights" }), _jsx("p", { children: "Total Customers: 50" }), _jsx("p", { children: "New Customers (Last Month): 5" })] })] })] }));
+};
+export default Dashboard;

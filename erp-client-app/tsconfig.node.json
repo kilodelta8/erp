@@ -8,17 +8,22 @@
 
     /* Bundler mode */
     "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
     "isolatedModules": true,
     "moduleDetection": "force",
-    "noEmit": true,
 
     /* Linting */
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    "noUncheckedSideEffectImports": true,
+
+    /* Composite projects */
+    "composite": true, // Required for project references
+    "noEmit": false, // Ensure files are emitted
+    "declaration": true, // Generate .d.ts files
+    "emitDeclarationOnly": false // Emit both .js and .d.ts files
   },
-  "include": ["vite.config.ts"]
+  "include": ["src/**/*"], // Include all files in the 'src' directory
+  "exclude": ["node_modules", "dist"]
 }
