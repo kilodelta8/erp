@@ -1,6 +1,7 @@
 ![Not my picture and not sure who owns it, just found it in a google search and using it](assets/infographic-erp-modules.avif)
 
-Not my image, I'm just bogarting it....(idgaf shoulder shrug)
+Not my image, I'm just bogarting it....(idgaHoot shoulder shrug)
+Just showing the complex nature of a true ERP systm.  It's actually kind of fascinating, all the components, if you think about it.
 
 # ERP System
 ERP System: s a software solution that integrates and manages core business processes like finance, HR, manufacturing, supply chain, and sales, providing a centralized platform for data and operations across an organization.
@@ -13,4 +14,4 @@ Yep, I'm using React.  I am new to PostGresql.  It's already jacked my Mac once.
 I will have to copy and paste, just imagine for right now.
 
 # Screenshits
-![Login Screen](assets/erp001)
+![Login Screen](assets/erp001.png)
